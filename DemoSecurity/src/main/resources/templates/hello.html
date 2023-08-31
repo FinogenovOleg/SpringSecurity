@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+<p th:text="'Hello, ' + ${name} + '!'" />
+<br>
+<form th:action="@{/logout}" th:method="post">
+  <input type="submit" value="LogOut">
+</form>
+</body>
+</html>
